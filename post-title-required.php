@@ -1,16 +1,19 @@
 <?php
 
 /*
-Plugin Name: WP Require Post Title
-Plugin URI: https://github.com/santoshtmp/wp-require-post-title
-Description: WP Require Post Title Plugin make the post title required field, also let the titl character limit. 
+Plugin Name: Post Title Required
+Description: Post Title Required plugin purpose to make title require field and limit its character.
+Plugin URI: https://github.com/santoshtmp
+Tags: Title, Required, Charcter Limit
 Version: 1.0.0
 Author: santoshtmp
 Author URI: https://github.com/santoshtmp
-Requires WP: 6.5
-Requires PHP: 7.4
+Requires WP: 6.0
+Tested up to: 6.5
+Requires PHP: 7.0
 Domain Path: languages
-Text Domain: wp-require-post-title
+Text Domain: post-title-required
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
