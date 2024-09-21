@@ -125,27 +125,34 @@ jQuery(function ($) {
      * quick edit field
      */
     $('.row-actions button.editinline').on('click', function () {
-        var titleField = $('input[name="post_title"]');
-        titleField.prop('required', true);
-        titleField.parent().parent().addClass('title-required');
         $('.requird-identify').remove();
         $('.title-required .title').append('<span class="requird-identify" style="color: #f00;">*</span>');
-        setTimeout(function () {
-            if (titleField.val().length === 0) {
-                $('.submit button.save').prop('disabled', true);
-            }
-        }, 1000);
 
+        // check on click quick edit
+        var find_input_interva = setInterval(function () {
+            var titleField = $('.inline-edit-col input[name="post_title"]');
+            if (titleField.length) {
+                clearInterval(find_input_interva);
+                titleField.prop('required', true);
+                titleField.parent().parent().addClass('title-required');
+
+                if (titleField.val().length === 0) {
+                    $('.submit button.save').prop('disabled', true);
+                }
+            }
+        }, 100);
+
+        // check on each title input
         titleField.on('input', function () {
-            titleField = $('input[name="post_title"]');
-            var currentLength = titleField.val().length;
+            var new_titleField = $('.inline-edit-col input[name="post_title"]');
+            var currentLength = new_titleField.val().length;
             if (currentLength === 0) {
                 $('.submit button.save').prop('disabled', true);
                 $('.wp-title-check-required').remove();
                 $('.title-required .input-text-wrap').append('<span class="wp-title-check-required" style="color: #f00;"> Title is required </span>');
             } else if (currentLength > characterLimit) {
-                var trimmedTitle = titleField.val().substring(0, characterLimit);
-                titleField.val(trimmedTitle);
+                var trimmedTitle = new_titleField.val().substring(0, characterLimit);
+                new_titleField.val(trimmedTitle);
                 $('.submit button.save').prop('disabled', true);
                 $('.wp-title-check-required').remove();
                 $('.title-required .input-text-wrap').append('<span class="wp-title-check-required" style="color: #f00;"> Title character limit is ' + characterLimit + '</span>');

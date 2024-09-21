@@ -6,7 +6,7 @@ Description: Post Title Required plugin purpose to make title require field and 
 Plugin URI: https://github.com/santoshtmp/post-title-required
 Tags: Title, Required, Charcter Limit
 Version: 1.0.0
-Author: santoshtmp
+Author: YIPL-santoshtmp
 Author URI: https://github.com/santoshtmp
 Requires WP: 6.0
 Tested up to: 6.5
