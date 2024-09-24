@@ -6,7 +6,7 @@
  *  Enqueue in backend admin area
  * ===================================================
  */
-function require_post_title_enqueue_script()
+function ptreq_enqueue_script()
 {
     // check post title
 
@@ -37,4 +37,4 @@ function require_post_title_enqueue_script()
         }
     }
 }
-add_action('admin_enqueue_scripts', 'require_post_title_enqueue_script');
+add_action('admin_enqueue_scripts', 'ptreq_enqueue_script');

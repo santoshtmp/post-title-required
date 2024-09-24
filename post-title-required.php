@@ -27,8 +27,8 @@ require_once dirname(__FILE__) . '/include/enqueue_scripts.php';
 require_once dirname(__FILE__) . '/include/setting_page.php';
 
 // Hook into the plugin action links filter
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'plugin_title_add_settings_link');
-function plugin_title_add_settings_link($links) {
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'ptreq_settings_link');
+function ptreq_settings_link($links) {
     // Create the settings link
     $settings_link = '<a href="options-general.php?page=post-title-required">Settings</a>';
     // Append the link to the existing links array

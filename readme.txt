@@ -1,6 +1,5 @@
 === Post Title Required ===
 Contributors: younginnovations
-Donate link: https://example.com/
 Tags: Title, Required, Charcter Limit
 Author: YIPL-santoshtmp
 Author URI: https://github.com/santoshtmp
