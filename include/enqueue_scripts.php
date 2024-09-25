@@ -15,7 +15,7 @@ function ptreq_enqueue_script()
     if ($pagenow == 'post-new.php' || $pagenow == 'post.php' || $pagenow == 'edit.php') {
         $allowed_post_types = (get_option('wp_title_require_post_types')) ?: [];
         if (in_array($post_type, $allowed_post_types) || count($allowed_post_types) === 0) {
-            $js_file_path = plugin_dir_url(__FILE__) . '../js/post-title-required.js';
+            $js_file_path = plugin_dir_url(__FILE__)  . '../dist/js/post-title-required.js';
             wp_enqueue_script(
                 'post-title-required-script',
                 $js_file_path,
@@ -27,12 +27,12 @@ function ptreq_enqueue_script()
                 )
             );
             $characterLimit = 100;
-            $wp_post_title_character_limit = (int) get_option('wp_post_title_character_limit');
-            if ($wp_post_title_character_limit) {
-                $characterLimit = $wp_post_title_character_limit;
+            $ptreq_character_limit = (int) get_option('ptreq_character_limit');
+            if ($ptreq_character_limit) {
+                $characterLimit = $ptreq_character_limit;
             }
             wp_localize_script('post-title-required-script', 'data_obj', [
-                'postCharacterLimit' => $characterLimit
+                'ptreq_character_limit' => $characterLimit
             ]);
         }
     }

@@ -1,7 +1,7 @@
 jQuery(function ($) {
     // Set your desired character limit
     try {
-        var characterLimit = data_obj.postCharacterLimit;
+        var characterLimit = data_obj.ptreq_character_limit;
     } catch (error) {
         var characterLimit = 100;
     }

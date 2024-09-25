@@ -2,8 +2,6 @@
 Contributors: younginnovations
 Tags: Title, Required, Charcter Limit
 Author: YIPL-santoshtmp
-Author URI: https://github.com/santoshtmp
-Plugin URI: https://github.com/santoshtmp/post-title-required
 Requires WP: 6.5
 Requires at least: 6.5
 Tested up to: 6.6.1
